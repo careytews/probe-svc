@@ -1,0 +1,6 @@
+FROM cybermaggedon/cybermon:1.0
+EXPOSE 9001
+CMD cybermon --port=9001 --transport=tls \
+    --config /etc/cyberprobe/redis.lua \
+    --key=/key/key.probe --certificate=/key/cert.probe \
+    --trusted-ca=/key/cert.ca
